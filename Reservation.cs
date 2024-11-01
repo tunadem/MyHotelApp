@@ -6,7 +6,7 @@ namespace MyHotelApp
 {
     // Properties
     public int ID { get; set; }
-    public int customerID { get; set; }
+    public int CustomerID { get; set; }
     public int RoomId { get; set; }
     public DateTime EnterDate { get; set; }
     public DateTime ExitDate { get; set; }
@@ -14,11 +14,11 @@ namespace MyHotelApp
 
 
     // Constructor
-    public Reservation(int id, int customerID,int customerID,DateTime enterDate,DateTime exitDate)
+    public Reservation(int id, int customerID, int roomID ,DateTime enterDate,DateTime exitDate)
     {
         ID = id;
         CustomerID = customerID;
-        RoomId = roomId;
+        RoomId = roomID;
         EnterDate = enterDate;
         ExitDate = exitDate;
     }
