@@ -16,6 +16,11 @@ namespace MyHotelApp
         Number = number;
     }
 
+    // Method
+    public void Greet()
+    {
+        Console.WriteLine($"ID : {ID} , Floor : {Floor} , Number : {Number}");
+    }
 }
 
 }

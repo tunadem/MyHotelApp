@@ -16,6 +16,11 @@ namespace MyHotelApp
         Surname = surname;
     }
 
+    // Method
+    public void Greet()
+    {
+        Console.WriteLine($"ID : {ID} , Name : {Name} , Surname : {Surname}");
+    }
 }
 
 }

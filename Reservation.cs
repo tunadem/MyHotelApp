@@ -18,11 +18,16 @@ namespace MyHotelApp
     {
         ID = id;
         CustomerID = customerID;
-        RoomId = customerID;
+        RoomId = roomId;
         EnterDate = enterDate;
         ExitDate = exitDate;
     }
 
+    // Method
+    public void Greet()
+    {
+        Console.WriteLine($"ID : {ID} , CustomerID : {CustomerID} , RoomId : {RoomId}");
+    }
 }
 
 }
