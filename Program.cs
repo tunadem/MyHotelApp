@@ -6,20 +6,22 @@ namespace MyHotelApp
     {
         static void Main(string[] args)
         {
-            Customer c1 = new Customer(1,"tunga","durmaz");
-            Customer c2 = new Customer(2,"anne","baysal");
-            Customer c3 = new Customer(3,"nu","gmail");
+            string roomFilePath = "rooms.json";
+            string customerFilePath = "customers.json";
+            string reservationFilePath = @"C:\Users\msı\OneDrive\Masaüstü\MyHotelApp\rooms.json";
 
-            Room r1 = new Room(1,0,1);
-            Room r2 = new Room(2,0,2);
-            Room r3 = new Room(3,0,3);
-            Room r4 = new Room(4,1,1);
-            Room r5 = new Room(5,1,2);
-            Room r6 = new Room(6,1,3);
+            // Initialize JsonDB and load RoomList
+            JsonDB jsonDB = new JsonDB(roomFilePath,customerFilePath);
 
-            r1.Greet();
-
-
+            // Iterate over the RoomList and print details
+            foreach (var room in jsonDB.RoomList)
+            {
+                Console.WriteLine($"ID = {room.ID}, Floor = {room.Floor}, Number = {room.Number}");
+            }
+            foreach (var customer in jsonDB.CustomerList)
+            {
+                Console.WriteLine($"ID = {customer.ID}, Name = {customer.Name}, Surname = {customer.Surname}");
+            }
         }
     }
 }
