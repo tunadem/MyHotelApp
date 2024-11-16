@@ -1,0 +1,4 @@
+[
+    { "ID": 1, "CustomerID": 1, "RoomId": 3, "EnterDate": "2024-01-01T14:00:00", "ExitDate": "2024-02-01T14:00:00" },
+    { "ID": 1, "CustomerID": 2, "RoomId": 2, "EnterDate": "2024-01-01T14:00:00", "ExitDate": "2024-02-01T14:00:00" }
+  ]

@@ -8,10 +8,10 @@ namespace MyHotelApp
         {
             string roomFilePath = "rooms.json";
             string customerFilePath = "customers.json";
-            string reservationFilePath = @"C:\Users\msı\OneDrive\Masaüstü\MyHotelApp\rooms.json";
+            string reservationFilePath = "reservations.json";
 
             // Initialize JsonDB and load RoomList
-            JsonDB jsonDB = new JsonDB(roomFilePath,customerFilePath);
+            JsonDB jsonDB = new JsonDB(roomFilePath,customerFilePath,reservationFilePath);
 
             // Iterate over the RoomList and print details
             foreach (var room in jsonDB.RoomList)
@@ -21,6 +21,10 @@ namespace MyHotelApp
             foreach (var customer in jsonDB.CustomerList)
             {
                 Console.WriteLine($"ID = {customer.ID}, Name = {customer.Name}, Surname = {customer.Surname}");
+            }
+            foreach (var reservation in jsonDB.ReservationList)
+            {
+                Console.WriteLine($"ID = {reservation.ID}, CustomerID = {reservation.CustomerID}, CustomerID = {reservation.RoomId}, EnterDate = {reservation.EnterDate}, ExitDate = {reservation.ExitDate}");
             }
         }
     }
